@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/theme/simple.css">
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -20,6 +20,8 @@
   <div class="reveal">
     <div class="slides">
       <section data-transition="slide-out">
+      </section>
+      <section data-transition="slide-out">
         <div data-transition="slide-out">
           <section data-transition="slide-out"
             data-background-iframe="https://docs.google.com/presentation/d/1L64K49woBYP6_sq5JBzZMSNEcw54aunIOMhmO_B_Zy8/edit#slide=id.p4"
@@ -28,10 +30,13 @@
         </div>
       </section>
       <section data-transition="slide-in fade-out">
+        <h2 data-transition="none">ところで</h2>
+      </section>
+      <section data-transition="slide-in fade-out">
         <p data-transition="none">エンジニアなら</p>
         <br>
         <h2 class="fragment">スライドはgit管理！！</h2>
-        <h2 class="fragment">Presentation as Code！！！</h2>
+        <h2 class="fragment">Slide as Code！！！</h2>
         <br>
         <small class="fragment">ですよね？</small>
       </section>
@@ -63,14 +68,10 @@
         <div style="display: flex;">
           <iframe
             data-src="https://docs.google.com/presentation/d/1L64K49woBYP6_sq5JBzZMSNEcw54aunIOMhmO_B_Zy8/edit#slide=id.p4"
-            data-preload style="transform:scale(0.5);
-            -moz-transform:scale(0.5);
-            -webkit-transform:scale(0.5);
-            -o-transform:scale(0.5);
-            -ms-transform:scale(0.5);
+            data-preload style="transform:scale(0.35);
             transform-origin:0 0;
             -moz-transform-origin:0 0;-webkit-transform-origin:0 0;-o-transform-origin:0 0;-ms-transform-origin:0 0;
-            margin-bottom:-300px;margin-right:-45%;width:200%;"></iframe>
+            margin-bottom:-400px;margin-right:-60%;width:180%;"></iframe>
           <p>
             ではなく
           </p>
@@ -84,26 +85,46 @@
       </section>
       <section data-transition="fade">
         <p>これを見てすげーーーって思ったから</p>
-        <img src="./react-conf-video-screen-shot.png" alt="img">
+        <img src="./react-conf-video-screen-shot.png" alt="img" height="500">
         <small>React Conf 2021 のXuan Huang (黄玄)-sanのプレゼン</small>
       </section>
 
-      <section data-transition="fade">
-        <br>
-        <br>
-        <!-- <br> -->
+      <section data-transition="fade" class="slack-notification-slide">
+        <br><br><br><br><br>
         HTML/CSS/JSをフル活用した表現ができる
-        <br>
-        <br>
-        <br>
+        <div class="fragment push-notification no-select" id="push-notification"
+          style="transition: all 0.15s ease !important">
+          <div class="slack-profile-icon">
+            <img class="icon-img" src=""
+              alt="slack profile icon" srcset="" height="50px" width="50px">
+          </div>
+          <div class="slack-notification-content">
+            <div class="slack-sansan">Sansan 株式会社</div>
+            <div class="slack-name"></div>
+            <div class="slack-message">たかぴろ！このあとご飯行かん？</div>
+          </div>
+        </div>
+        <div class="fragment you-can-make-this no-select">
+          <p>こういうのも作れる！</p>
+        </div>
+        <div>
+          <div class="box">
+            <b class="fragment b1"></b>
+            <b class="fragment b2"></b>
+          </div>
+        </div>
+        <div class="fragment fun-rainbow-text no-select">
+          <p class="rainbow rainbow_text_animated">It's fun!!</p>
+        </div>
+
       </section>
       <section>
         やってみた感想
         <br><br>
         <ul>
           <li class="fragment">マークアップをちまちまやるのが楽しかった！</li>
-          <li class="fragment">まあでも大変だった</li>
-          <li class="fragment">気軽に画像を入れたり、図形をDnDで作ったりできない</li>
+          <li class="fragment">エンジニアなので楽しい</li>
+          <li class="fragment">気軽に画像を入れたり、図形をDnDできないのは大変</li>
         </ul>
       </section>
       <section>
@@ -125,11 +146,11 @@
       </section>
       <section>
         <h2>
-          で、映えた？
+          映えた？
         </h2>
         <ul>
           <li class="fragment">凝ったらきれいにはできるかも？</li>
-          <li class="fragment">最近だと、canva使ったほうが映えるかなー</li>
+          <li class="fragment">インタラクティブなスライドだったり、映えるシーンはいくらでも</li>
           <li class="fragment">文字のmorphトランジションはやりたかったけどできず</li>
         </ul>
         <div class="fragment">
@@ -139,7 +160,7 @@
       <section>
         <div>
           <p>
-            他には？
+            reveal.jsの他には？
           </p>
           <ul>
             <li class="fragment">
@@ -184,7 +205,13 @@
       backgroundTransition: 'fade',
       transition: "fade",
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      history: false,
+      // The "normal" size of the presentation, aspect ratio will
+      // be preserved when the presentation is scaled to fit different
+      // resolutions. Can be specified using percentage units.
+      width: 1240,
+      height: 700,
     });
   </script>
 </body>
