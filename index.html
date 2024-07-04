@@ -1,40 +1,192 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-transition="slide-out">
+        <div data-transition="slide-out">
+          <section data-transition="slide-out"
+            data-background-iframe="https://docs.google.com/presentation/d/1L64K49woBYP6_sq5JBzZMSNEcw54aunIOMhmO_B_Zy8/edit#slide=id.p4"
+            data-background-interactive>
+          </section>
+        </div>
+      </section>
+      <section data-transition="slide-in fade-out">
+        <p data-transition="none">エンジニアなら</p>
+        <br>
+        <h2 class="fragment">スライドはgit管理！！</h2>
+        <h2 class="fragment">Presentation as Code！！！</h2>
+        <br>
+        <small class="fragment">ですよね？</small>
+      </section>
+      <section data-transition="zoom-in fade-out">
+        <p>
+          そんなあなたに
+          reveal.js のご紹介
+        </p>
+      </section>
+      <section data-transition="fade">
+        reveal.jsとは
+        <blockquote>
+          reveal.js is an open source HTML presentation framework.
+        </blockquote>
+      </section>
+      <section>
+        <p>
+          この資料は <a href="https://revealjs.com/">reveal.js</a> で作りました
+        </p>
+        <div style="display: flex;justify-content: center; height: 265px;">
+          <img src="./revealjs-image.png" alt="reveal.js">
+        </div>
+
+      </section>
+      <section data-transition="fade">
+        <p>
+          この資料は <a href="https://revealjs.com/">reveal.js</a> で作りました
+        </p>
+        <div style="display: flex;">
+          <iframe
+            data-src="https://docs.google.com/presentation/d/1L64K49woBYP6_sq5JBzZMSNEcw54aunIOMhmO_B_Zy8/edit#slide=id.p4"
+            data-preload style="transform:scale(0.5);
+            -moz-transform:scale(0.5);
+            -webkit-transform:scale(0.5);
+            -o-transform:scale(0.5);
+            -ms-transform:scale(0.5);
+            transform-origin:0 0;
+            -moz-transform-origin:0 0;-webkit-transform-origin:0 0;-o-transform-origin:0 0;-ms-transform-origin:0 0;
+            margin-bottom:-300px;margin-right:-45%;width:200%;"></iframe>
+          <p>
+            ではなく
+          </p>
+          <div>
+            <img src="./revealjs-image.png" alt="reveal.js">
+          </div>
+        </div>
+      </section>
+      <section data-transition="fade">
+        なぜ？
+      </section>
+      <section data-transition="fade">
+        <p>これを見てすげーーーって思ったから</p>
+        <img src="./react-conf-video-screen-shot.png" alt="img">
+        <small>React Conf 2021 のXuan Huang (黄玄)-sanのプレゼン</small>
+      </section>
+
+      <section data-transition="fade">
+        <br>
+        <br>
+        <!-- <br> -->
+        HTML/CSS/JSをフル活用した表現ができる
+        <br>
+        <br>
+        <br>
+      </section>
+      <section>
+        やってみた感想
+        <br><br>
+        <ul>
+          <li class="fragment">マークアップをちまちまやるのが楽しかった！</li>
+          <li class="fragment">まあでも大変だった</li>
+          <li class="fragment">気軽に画像を入れたり、図形をDnDで作ったりできない</li>
+        </ul>
+      </section>
+      <section>
+        <p>
+          reveal.jsのちょっと微妙なところ
+        </p>
+        <ul>
+          <li class="fragment">gulpでビルドしてる（古いね）</li>
+          <li class="fragment">型がない
+            <ul class="fragment">
+              <small>
+                <li>
+                  でも、React用のプラグイン拡張もあるからそれなら良い感じかも。
+                </li>
+              </small>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>
+          で、映えた？
+        </h2>
+        <ul>
+          <li class="fragment">凝ったらきれいにはできるかも？</li>
+          <li class="fragment">最近だと、canva使ったほうが映えるかなー</li>
+          <li class="fragment">文字のmorphトランジションはやりたかったけどできず</li>
+        </ul>
+        <div class="fragment">
+          <img src="./output2.gif" alt="" height="300px">
+        </div>
+      </section>
+      <section>
+        <div>
+          <p>
+            他には？
+          </p>
+          <ul>
+            <li class="fragment">
+              <a href="https://marp.app/">https://marp.app/</a>
+              <ul>
+                <li>
+                  markdown→HTML, PDF, Powerpointに
+                </li>
+              </ul>
+            </li>
+            <li class="fragment">
+              <a href="https://sli.dev/">https://sli.dev/</a>
+              <ul>
+                <li>vueベースでmarkdownを用いる</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <p>
+          Thanks!
+        </p>
+        <small>
+          <a
+            href="https://github.com/takapiro99/attractive-presentation-slides-2024">https://github.com/takapiro99/attractive-presentation-slides-2024</a>
+        </small>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      backgroundTransition: 'fade',
+      transition: "fade",
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
