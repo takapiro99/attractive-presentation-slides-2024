@@ -133,13 +133,13 @@ section > * {
 }
 
 .box .b1 {
-  animation: moveX 2s linear 0s infinite alternate,
+  animation: moveX 2.1s linear 0s infinite alternate,
     moveY 3.4s linear 0s infinite alternate;
 }
 
 .box .b2 {
-  animation: moveX 2s linear 0s infinite alternate,
-    moveY 1.5s linear 0s infinite alternate;
+  animation: moveX 2.6s linear 0s infinite alternate,
+    moveY 1.7s linear 0s infinite alternate;
 }
 
 @keyframes moveX {
